@@ -67,23 +67,8 @@
       margin: 0 auto;
       gap: 16px;
     }
-    .brand { display: flex; align-items: center; gap: 12px; cursor: default; }
-    .brand .mark { width: 34px; height: 34px; flex: none; }
-    .brand-text { display: flex; flex-direction: column; line-height: 1; }
-    .wordmark {
-      font-family: var(--serif);
-      font-weight: 600;
-      font-size: 26px;
-      letter-spacing: 0.2px;
-      color: var(--ink);
-    }
-    .tagline {
-      font-size: 9.5px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--slate);
-      margin-top: 3px;
-    }
+    .brand { display: inline-flex; align-items: center; text-decoration: none; }
+    .brand-logo { height: 40px; width: auto; display: block; }
     nav { display: flex; align-items: center; gap: 10px; }
 
     .icon-btn {
@@ -396,7 +381,7 @@
 
     @media (max-width: 560px) {
       .header-inner { padding: 14px 18px; }
-      .tagline { display: none; }
+      .brand-logo { height: 32px; }
       .hero { padding: 52px 0 34px; }
       .card { padding: 22px 18px; }
       .tool-row { flex-direction: column; align-items: stretch; }
@@ -411,17 +396,10 @@
   <!-- ============ HEADER ============ -->
   <header>
     <div class="header-inner">
-      <div class="brand">
-        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
-          <rect width="32" height="32" rx="7" fill="#1a1a2e"/>
-          <path d="M22 9.5a8.5 8.5 0 1 0 0 13" fill="none" stroke="#f7f3ee" stroke-width="2.4" stroke-linecap="round"/>
-          <path d="M9.5 12.5 16 17l6.5-4.5" fill="none" stroke="#d4a853" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <div class="brand-text">
-          <span class="wordmark">ClientMail</span>
-          <span class="tagline">Email Tone Intelligence</span>
-        </div>
-      </div>
+      <a class="brand" href="/" aria-label="ClientMail — Email Tone Intelligence">
+        <img class="brand-logo" src="/headlogo1.png" width="603" height="150"
+             alt="ClientMail — Email Tone Intelligence" />
+      </a>
       <nav>
         <button class="icon-btn" id="settingsBtn" aria-label="License key settings" title="Enter Pro license key">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -438,7 +416,7 @@
 
     <!-- ============ HERO ============ -->
     <section class="hero">
-      <h1>Know how your email lands.</h1>
+      <h1>Your email sounds different than you think.</h1>
       <p class="sub">Before you hit send.</p>
       <p class="lede">ClientMail analyzes your tone, flags risky language, and rewrites it to land exactly the way you intended — so a single client email never costs you the relationship.</p>
     </section>
@@ -446,7 +424,7 @@
     <!-- ============ THE TOOL ============ -->
     <section class="card tool">
       <label class="field-label" for="emailText">Your email draft</label>
-      <textarea id="emailText" placeholder="Paste your email draft here..."></textarea>
+      <textarea id="emailText" placeholder="Paste the email you're second-guessing..."></textarea>
 
       <div class="tool-row">
         <div class="tone-group">
