@@ -563,8 +563,9 @@
 
     // ---- Configuration ----
     const API_ENDPOINT  = 'https://n8n.tekmost.com/webhook/analyze-tone';
-    // TODO: replace with the live Stripe Payment Link once created (Blueprint Phase 1).
-    const STRIPE_LINK   = 'https://buy.stripe.com/REPLACE_WITH_LIVE_PAYMENT_LINK';
+    // Stripe Payment Link. NOTE: this is the TEST-mode link — swap to the
+    // live link at go-live (Blueprint Phase 4, Go-Live step 3).
+    const STRIPE_LINK   = 'https://buy.stripe.com/test_cNi7sKfn67MC9GU771cQU00';
     const FREE_LIMIT    = 3;
     const LS_USES       = 'cm_free_uses';
     const LS_KEY        = 'cm_license_key';
