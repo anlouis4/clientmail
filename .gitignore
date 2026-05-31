@@ -1,0 +1,6 @@
+# Internal planning / brand reference material — not for the public site
+assets/
+
+# OS noise
+.DS_Store
+**/.DS_Store
